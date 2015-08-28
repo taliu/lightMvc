@@ -9,6 +9,7 @@ http.createServer(function(req,res){
 		next();
 	});
 	ct.use(require("./lib/RequestDataModule"));
+	ct.use(require("./lib/CookieModule"));
 	ct.use(require("./lib/StaticFileModule"));
 	ct.use(require("./lib/RouteModule"));
 	ct.use(require("./lib/ActionResultModule"));

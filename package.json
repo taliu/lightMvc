@@ -12,6 +12,7 @@
   "author": "taliu",
   "license": "ISC",
   "dependencies": {
+    "cookie": "^0.2.0",
     "formidable": "^1.0.17",
     "mime-types": "^2.1.5",
     "vash": "^0.9.3"
