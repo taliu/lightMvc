@@ -8,8 +8,11 @@ module.exports=function(req,res){
 		res.cookie("data",["12",23]);
 		return res.view(model);
 	};
-	this.postIndex=function(){
+	this.post_index=function(){
 		return res.content("it is a post request for index");
+	};
+	this.get_index = function () {
+	    return res.content("it is a get request for index");
 	};
 
 	this.apple=function(){
