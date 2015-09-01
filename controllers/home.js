@@ -4,7 +4,10 @@ module.exports = function (req, res) {
             title: "welcome",
             content: "welcome to node mvc" + Date.now()
         };
-        res.cookie("ssid", "123456789");
+		console.log("cookies:",req.cookies);
+		console.log("header cookies:",req.headers.cookie);
+
+        res.cookie("ssid", "123456789",{expires:new Date(2050,1,1)});
         res.cookie("data", ["12", 23]);
         return res.view(model);
     };
