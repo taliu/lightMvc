@@ -1,14 +1,16 @@
 module.exports = function (req, res) {
     this.index = function () {
+		req.session.count=req.session.count||0;
+		req.session.count++;
         var model = {
             title: "welcome",
-            content: "welcome to node mvc" + Date.now()
+            content: 	req.session.count+" welcome to node mvc" + Date.now()
         };
 		console.log("cookies:",req.cookies);
-		console.log("header cookies:",req.headers.cookie);
-
+		//console.log("header cookies:",req.headers.cookie);
+	   
         res.cookie("ssid", "123456789",{expires:new Date(2050,1,1)});
-        res.cookie("data", ["12", 23]);
+		res.cookie("flag","我是这的主人");
         return res.view(model);
     };
 
