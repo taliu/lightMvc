@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>登入</title>
+	</head>
+	<body>
+		<h2>用户登入</h2>
+		<form action="/account/login" method="post">
+			<p>
+				@if(model.error){
+						<label style="color:red">@model.error</label>
+				}
+			</p>
+			<p>
+				<label>用户名称</label>
+				<input type="text" name="username" value="@model.username" />
+			</p>
+			<p>
+				<label>用户密码</label>
+				<input type="password" name="password" />
+			</p>
+			<p>
+				<input type="submit" value="登入" />
+			</p>
+		</form>
+	</body>
+</html>

@@ -28,6 +28,7 @@ var ActionResults = {
                 var html = tpl(viewModle);
                 res.statusCode = 200;
                 res.setHeader('Content-Type', mime.contentType('.html'));
+                res.setHeader('Content-Length', Buffer.byteLength(html));
                 res.sendCookies();
                 res.end(html);
             });

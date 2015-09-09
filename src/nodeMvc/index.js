@@ -6,15 +6,17 @@ var config=require("./lib/config");
 module.exports=function(){
 	return Mvc;
 }
-
+var middleWares=[];
 function Mvc(req,res){
 	var ct=connact(req,res);
 		ct.use(require("./lib/RequestDataModule"))
 			.use(require("./lib/CookieModule"))
 			.use(require("./lib/SessionModule"))
-			.use(require("./lib/StaticFileModule"))
+			//.use(require("./lib/StaticFileModule"))
 			.use(require("./lib/RouteModule"))
-			.use(require("./lib/ActionResultModule"))
+			.use(require("./lib/ActionResultModule"));
+		middleWares.forEach(function(fn){ct.use(fn); });	
+		ct.use(require("./lib/StaticFileModule"))
 			.use(require("./lib/MvcHandleModule"))
 			.done();
 }
@@ -29,6 +31,13 @@ Mvc.addRouter=function(pattern, defaultOpts, constraintOpts){
 		//RouteTable.addRouter("/{controller}/{action}/{id}",{controller:"home",action:"index",id:1},{id:/\d+/});
 		RouteTable.addRouter(pattern, defaultOpts, constraintOpts);
 };
+
+Mvc.use=function(fn){
+	if(typeof fn !== "function"){
+		throw new TypeError("参数 fn 的类型必须为funcion类型");
+	}
+	middleWares.push(fn);
+}
 
 //设置视图文件存放路径, 视图文件后缀为 .html, 使用vash模板引擎( razor语法)
 Mvc.setViews=function(path){
