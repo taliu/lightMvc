@@ -1,14 +1,14 @@
 {
   "name": "lightmvc",
-  "version": "1.0.0",
-  "description": "node mvc framework",
+  "version": "1.0.1",
+  "description": "a node mvc framework,like asp.net mvc",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
 	  "type": "git",
-	  "url": "git@github.com:taliu/nodeMvc.git"
+	  "url": "git@github.com:taliu/lightMvc.git"
   },
   "keywords": [
 	  "mvc",
@@ -16,7 +16,8 @@
 		"razor"
 	  ],
   "author": "taliu",
-  "license": "ISC",
+  "license": "MIT",
+  "readmeFilename": "README.md",
   "dependencies": {
 	  "cookie": "^0.2.0",
 	  "formidable": "^1.0.17",
