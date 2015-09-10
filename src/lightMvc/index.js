@@ -12,7 +12,6 @@ function Mvc(req,res){
 		ct.use(require("./lib/RequestDataModule"))
 			.use(require("./lib/CookieModule"))
 			.use(require("./lib/SessionModule"))
-			//.use(require("./lib/StaticFileModule"))
 			.use(require("./lib/RouteModule"))
 			.use(require("./lib/ActionResultModule"));
 		middleWares.forEach(function(fn){ct.use(fn); });	

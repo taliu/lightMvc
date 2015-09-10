@@ -1,0 +1,26 @@
+{
+  "name": "lightmvc",
+  "version": "1.0.0",
+  "description": "node mvc framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+	  "type": "git",
+	  "url": "git@github.com:taliu/nodeMvc.git"
+  },
+  "keywords": [
+	  "mvc",
+		"framework",
+		"razor"
+	  ],
+  "author": "taliu",
+  "license": "ISC",
+  "dependencies": {
+	  "cookie": "^0.2.0",
+	  "formidable": "^1.0.17",
+	  "mime-types": "^2.1.5",
+	  "vash": "^0.9.3"
+  }
+}

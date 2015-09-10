@@ -1,4 +1,4 @@
-var Mvc=require("nodeMvc");
+var Mvc=require("lightmvc");
 
 var app=Mvc();
 
