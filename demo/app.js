@@ -20,7 +20,7 @@ app.use(function(err,req,res,next){
 });
 
 
-//设置视图文件存放路径, 视图文件后缀为 .html, 使用vash模板引擎( razor语法)
+//设置视图文件存放路径, 视图文件后缀为 .htm, 使用vash模板引擎( razor语法)
 app.setViews(__dirname+"/views");
 //设置控制器文件存放路径
 app.setController(__dirname+"/controllers");
