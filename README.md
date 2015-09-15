@@ -64,7 +64,7 @@ node app.js
 
 ### app
 1. app.setViews(path)
-设置视图文件存放路径, 视图文件后缀为 .html, 使用vash模板引擎( razor语法)
+设置视图文件存放路径, 视图文件后缀为 .htm, 使用vash模板引擎( razor语法)
 
 2. app.setController(path);
 设置控制器文件存放路径
